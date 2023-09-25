@@ -1,0 +1,77 @@
+<form
+	class="crud flex-column"
+	autocomplete="off"
+	[formGroup]="eventsService.eventsFormGroup"
+	(ngSubmit)="eventsService.saveEvent()"
+>
+	<div class="crud__elements">
+		<div class="fields flex-column">
+			<mat-form-field appearance="outline">
+				<mat-label>Nombre</mat-label>
+				<input matInput type="text" formControlName="nombre" />
+				<mat-error *ngIf="eventsService.titleField.hasError('required')">Este campo es requerido</mat-error>
+			</mat-form-field>
+
+			<mat-form-field class="example-full-width" appearance="outline">
+				<mat-label>description</mat-label>
+				<textarea matInput formControlName="description"></textarea>
+				<mat-error *ngIf="eventsService.descriptionField.hasError('required')">Este campo es requerido</mat-error>
+			</mat-form-field>
+
+			<mat-form-field appearance="outline">
+				<mat-label>Fecha</mat-label>
+				<input matInput [matDatepicker]="picker" formControlName="date" />
+				<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+				<mat-datepicker #picker></mat-datepicker>
+				<mat-error *ngIf="eventsService.dateField.hasError('required')">Este campo es requerido</mat-error>
+			</mat-form-field>
+
+			<mat-form-field appearance="outline">
+				<mat-label>Cantidad</mat-label>
+				<input matInput type="number" formControlName="ticketsQuantity" />
+				<mat-error *ngIf="eventsService.ticketsQuantityField.hasError('required')">Este campo es requerido</mat-error>
+			</mat-form-field>
+
+			<mat-form-field appearance="outline">
+				<mat-label>Precio</mat-label>
+				<input matInput type="number" formControlName="price" />
+				<mat-error *ngIf="eventsService.priceField.hasError('required')">Este campo es requerido</mat-error>
+			</mat-form-field>
+
+			<mat-form-field appearance="outline">
+				<mat-label>Tipo</mat-label>
+				<mat-select formControlName="genre">
+					<mat-option *ngFor="let item of listGenres" [value]="item.id"> {{ item.name }} </mat-option>
+				</mat-select>
+				<mat-error *ngIf="eventsService.genreField.hasError('required')">Este campo es requerido</mat-error>
+			</mat-form-field>
+
+			<mat-form-field appearance="outline">
+				<mat-label>Estado</mat-label>
+				<mat-select formControlName="status">
+					<mat-option [value]="1"> ACTIVO </mat-option>
+					<mat-option [value]="0"> INACTIVO </mat-option>
+				</mat-select>
+				<mat-error *ngIf="eventsService.statusField.hasError('required')">Este campo es requerido</mat-error>
+			</mat-form-field>
+
+			<button mat-raised-button color="primary" type="button" type="submit" >GUARDAR</button>
+
+			<button mat-raised-button color="accent" type="button" (click)="clickClear()">LIMPIAR</button>
+		</div>
+
+		<div class="load-image flex-column">
+			<div class="load-image__image">
+				<img *ngIf="eventsService.imageField.value" [src]="eventsService.imageField.value" />
+				<input hidden (change)="onFileSelected($event)" #fileInput type="file" accept=".jpg,.jpeg,.png" />
+			</div>
+
+			<button mat-raised-button color="primary" (click)="fileInput.click()" type="button">
+				<mat-icon>camera</mat-icon>
+				IMAGEN
+			</button>
+
+			<mat-error *ngIf="eventsService.imageField.hasError('required')">Este campo es requerido</mat-error>
+		</div>
+	</div>
+</form>

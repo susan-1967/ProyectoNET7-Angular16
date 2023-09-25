@@ -1,0 +1,22 @@
+2023-09-25 07:24:46 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-25 07:24:46 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-25 07:35:48 [WRN] - Failed to determine the https port for redirect.
+2023-09-25 07:59:35 [FTL] - "Error al autenticar al usuario" "Usuario no existe"
+System.Security.SecurityException: Usuario no existe
+   at VintageStore.Services.Implementations.UserService.LoginAsync(LoginDtoRequest request) in C:\Susan\Proyecto\VintageStore\VintageStore.Services\Implementations\UserService.cs:line 51
+2023-09-25 08:00:21 [FTL] - "Error al autenticar al usuario" "Usuario no existe"
+System.Security.SecurityException: Usuario no existe
+   at VintageStore.Services.Implementations.UserService.LoginAsync(LoginDtoRequest request) in C:\Susan\Proyecto\VintageStore\VintageStore.Services\Implementations\UserService.cs:line 51
+2023-09-25 08:01:19 [FTL] - "Error al autenticar al usuario" "Usuario no existe"
+System.Security.SecurityException: Usuario no existe
+   at VintageStore.Services.Implementations.UserService.LoginAsync(LoginDtoRequest request) in C:\Susan\Proyecto\VintageStore\VintageStore.Services\Implementations\UserService.cs:line 51
+2023-09-25 08:05:24 [WRN] - No se puede enviar el correo "The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, the user credentials were incorrect. [SCZP215CA0029.LAMP215.PROD.OUTLOOK.COM 2023-09-25T12:57:07.953Z 08DBBC820E13647E]"
+System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, the user credentials were incorrect. [SCZP215CA0029.LAMP215.PROD.OUTLOOK.COM 2023-09-25T12:57:07.953Z 08DBBC820E13647E]
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.EndSend(IAsyncResult result)
+   at System.Net.Mail.SendMailAsyncResult.SendMailFromCompleted(IAsyncResult result)
+--- End of stack trace from previous location ---
+   at System.Net.Mail.SendMailAsyncResult.End(IAsyncResult result)
+   at System.Net.Mail.SmtpClient.SendMailCallback(IAsyncResult result)
+--- End of stack trace from previous location ---
+   at VintageStore.Services.Implementations.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Susan\Proyecto\VintageStore\VintageStore.Services\Implementations\EmailService.cs:line 42

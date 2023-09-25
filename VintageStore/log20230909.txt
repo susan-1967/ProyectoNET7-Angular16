@@ -1,0 +1,16 @@
+2023-09-09 12:00:02 [WRN] - Entity '"Genre"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-09 12:00:02 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-09 12:00:03 [WRN] - Entity '"Genre"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-09 12:02:28 [WRN] - Entity '"Genre"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-09 12:02:28 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-09 12:02:29 [ERR] - Failed executing DbCommand ("14"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""CREATE TABLE [Genre] (
+    [Id] int NOT NULL IDENTITY,
+    [Name] nvarchar(50) NOT NULL,
+    [CreationDate] datetime2 NOT NULL,
+    [ModifiedDate] datetime2 NULL,
+    [Status] bit NOT NULL,
+    CONSTRAINT [PK_Genre] PRIMARY KEY ([Id])
+);"
+2023-09-09 12:03:51 [WRN] - Entity '"Genre"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-09 12:03:51 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.

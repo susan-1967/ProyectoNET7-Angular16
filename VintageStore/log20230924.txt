@@ -1,0 +1,180 @@
+2023-09-24 06:17:18 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 06:17:18 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 06:17:27 [WRN] - Failed to determine the https port for redirect.
+2023-09-24 07:19:26 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 07:19:26 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 07:20:05 [WRN] - Failed to determine the https port for redirect.
+2023-09-24 07:43:24 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 07:43:24 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 07:43:38 [WRN] - Failed to determine the https port for redirect.
+2023-09-24 07:53:14 [WRN] - No se puede enviar el correo "The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, the user credentials were incorrect. [SC1PR80CA0158.lamprd80.prod.outlook.com 2023-09-24T12:44:57.971Z 08DBBCB5A6F0057F]"
+System.Net.Mail.SmtpException: The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.57 Client not authenticated to send mail. Error: 535 5.7.139 Authentication unsuccessful, the user credentials were incorrect. [SC1PR80CA0158.lamprd80.prod.outlook.com 2023-09-24T12:44:57.971Z 08DBBCB5A6F0057F]
+   at System.Net.Mail.MailCommand.CheckResponse(SmtpStatusCode statusCode, String response)
+   at System.Net.Mail.MailCommand.EndSend(IAsyncResult result)
+   at System.Net.Mail.SendMailAsyncResult.SendMailFromCompleted(IAsyncResult result)
+--- End of stack trace from previous location ---
+   at System.Net.Mail.SendMailAsyncResult.End(IAsyncResult result)
+   at System.Net.Mail.SmtpClient.SendMailCallback(IAsyncResult result)
+--- End of stack trace from previous location ---
+   at VintageStore.Services.Implementations.EmailService.SendEmailAsync(String email, String subject, String message) in C:\Susan\Proyecto\VintageStore\VintageStore.Services\Implementations\EmailService.cs:line 42
+2023-09-24 08:31:47 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 08:31:47 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 08:37:06 [WRN] - Failed to determine the https port for redirect.
+2023-09-24 08:43:45 [ERR] - Error agregando la venta "El concierto con Id 0 no existe"
+System.Exception: El concierto con Id 0 no existe
+   at VintageStore.Services.Implementations.VentaService.AddAsync(String email, VentaDtoRequest request) in C:\Susan\Proyecto\VintageStore\VintageStore.Services\Implementations\VentaService.cs:line 54
+2023-09-24 09:20:38 [ERR] - Error agregando la venta "El concierto con Id 0 no existe"
+System.Exception: El concierto con Id 0 no existe
+   at VintageStore.Services.Implementations.VentaService.AddAsync(String email, VentaDtoRequest request) in C:\Susan\Proyecto\VintageStore\VintageStore.Services\Implementations\VentaService.cs:line 54
+2023-09-24 09:35:51 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 09:35:51 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 09:36:41 [WRN] - Failed to determine the https port for redirect.
+2023-09-24 09:36:41 [ERR] - An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.ThrowHelper.ThrowNoMatchException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at VintageStore.Api.Controllers.VentaController.Post(VentaDtoRequest request) in C:\Susan\Proyecto\VintageStore\VintageStore.Api\Controllers\VentaController.cs:line 29
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-09-24 09:37:32 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 09:37:33 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 09:43:33 [WRN] - Failed to determine the https port for redirect.
+2023-09-24 09:43:34 [ERR] - An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.ThrowHelper.ThrowNoMatchException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at VintageStore.Api.Controllers.VentaController.Post(VentaDtoRequest request) in C:\Susan\Proyecto\VintageStore\VintageStore.Api\Controllers\VentaController.cs:line 29
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-09-24 09:44:38 [ERR] - An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Sequence contains no matching element
+   at System.Linq.ThrowHelper.ThrowNoMatchException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source, Func`2 predicate)
+   at VintageStore.Api.Controllers.VentaController.Post(VentaDtoRequest request) in C:\Susan\Proyecto\VintageStore\VintageStore.Api\Controllers\VentaController.cs:line 29
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2023-09-24 09:45:35 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 09:45:35 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 09:45:44 [WRN] - Failed to determine the https port for redirect.
+2023-09-24 09:54:28 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 09:54:28 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 09:55:35 [WRN] - Failed to determine the https port for redirect.
+2023-09-24 09:55:54 [ERR] - Error agregando la venta "El concierto con Id 0 no existe"
+System.Exception: El concierto con Id 0 no existe
+   at VintageStore.Services.Implementations.VentaService.AddAsync(String email, VentaDtoRequest request) in C:\Susan\Proyecto\VintageStore\VintageStore.Services\Implementations\VentaService.cs:line 54
+2023-09-24 09:56:50 [ERR] - Error agregando la venta "El concierto con Id 0 no existe"
+System.Exception: El concierto con Id 0 no existe
+   at VintageStore.Services.Implementations.VentaService.AddAsync(String email, VentaDtoRequest request) in C:\Susan\Proyecto\VintageStore\VintageStore.Services\Implementations\VentaService.cs:line 54
+2023-09-24 09:58:58 [ERR] - Error agregando la venta "No se puede comprar tickets para el concierto string porque ya pasó"
+System.InvalidOperationException: No se puede comprar tickets para el concierto string porque ya pasó
+   at VintageStore.Services.Implementations.VentaService.AddAsync(String email, VentaDtoRequest request) in C:\Susan\Proyecto\VintageStore\VintageStore.Services\Implementations\VentaService.cs:line 59
+2023-09-24 09:59:30 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 09:59:30 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 10:00:42 [WRN] - Failed to determine the https port for redirect.
+2023-09-24 10:02:07 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 10:02:08 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 10:02:21 [WRN] - Failed to determine the https port for redirect.
+2023-09-24 10:27:13 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 10:27:13 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 10:27:29 [WRN] - Failed to determine the https port for redirect.
+2023-09-24 10:40:48 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 10:40:48 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 10:42:02 [WRN] - Failed to determine the https port for redirect.
+2023-09-24 11:01:11 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 11:01:11 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 11:04:03 [WRN] - Failed to determine the https port for redirect.
+2023-09-24 14:48:36 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 14:48:36 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 14:51:53 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 14:51:54 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 14:57:18 [WRN] - Failed to determine the https port for redirect.
+2023-09-24 15:11:45 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 15:11:45 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 15:12:06 [WRN] - Failed to determine the https port for redirect.
+2023-09-24 15:20:22 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 15:20:22 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 15:20:29 [WRN] - Failed to determine the https port for redirect.
+2023-09-24 15:22:44 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 15:22:44 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 15:23:31 [WRN] - Failed to determine the https port for redirect.
+2023-09-24 15:32:17 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 15:32:17 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 15:36:30 [WRN] - Failed to determine the https port for redirect.
+2023-09-24 16:28:57 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 16:28:57 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 16:29:11 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 16:29:11 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 16:29:11 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 16:30:17 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 16:30:17 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 16:47:10 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 16:47:10 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 16:47:22 [WRN] - Failed to determine the https port for redirect.
+2023-09-24 16:57:52 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 16:57:52 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 16:57:56 [WRN] - Failed to determine the https port for redirect.
+2023-09-24 16:59:25 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 16:59:25 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 17:00:04 [WRN] - Failed to determine the https port for redirect.
+2023-09-24 17:04:09 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 17:04:09 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 17:05:29 [WRN] - Failed to determine the https port for redirect.
+2023-09-24 17:09:32 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 17:09:32 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 17:09:53 [WRN] - Failed to determine the https port for redirect.
+2023-09-24 19:42:41 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 19:42:41 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 19:48:52 [WRN] - Failed to determine the https port for redirect.
+2023-09-24 20:23:24 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 20:23:24 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 20:29:28 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 20:29:28 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 20:30:26 [WRN] - Failed to determine the https port for redirect.
+2023-09-24 20:33:45 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 20:33:45 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 20:34:05 [WRN] - Failed to determine the https port for redirect.
+2023-09-24 20:40:20 [WRN] - Entity '"Tipo"' has a global query filter defined and is the required end of a relationship with the entity '"Producto"'. This may lead to unexpected results when the required entity is filtered out. Either configure the navigation as optional, or define matching query filters for both entities in the navigation. See https://go.microsoft.com/fwlink/?linkid=2131316 for more information.
+2023-09-24 20:40:20 [WRN] - Sensitive data logging is enabled. Log entries and exception messages may include sensitive application data; this mode should only be enabled during development.
+2023-09-24 20:41:40 [WRN] - Failed to determine the https port for redirect.

@@ -1,0 +1,28 @@
+<div>
+	<h2>Producto</h2>
+
+	<div class="content">
+		<mat-tab-group
+			mat-align-tabs="center"
+			backgroundColor="primary"
+			[selectedIndex]="indexTabSaveEvent"
+			(selectedIndexChange)="indexTabSaveEvent = $event"
+		>
+			<mat-tab backgroundColor="primary">
+				<ng-template mat-tab-label>
+					<mat-icon class="example-tab-icon">playlist_add</mat-icon>
+					REGISTRO
+				</ng-template>
+				<app-crud-event />
+			</mat-tab>
+
+			<mat-tab>
+				<ng-template mat-tab-label>
+					<mat-icon class="example-tab-icon">list</mat-icon>
+					LISTADO
+				</ng-template>
+				<app-event-table (clickUpdate)="indexTabSaveEvent = 0" />
+			</mat-tab>
+		</mat-tab-group>
+	</div>
+</div>
